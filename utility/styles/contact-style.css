@@ -82,6 +82,7 @@ img{
 }
 
 .heading{
+    text-align: center;
     font-size: 2.65rem;
     font-family: "Abril Fatface",cursive;
     color: #e33745;
@@ -96,93 +97,11 @@ img{
 }
 
 
-
-/* ---------------------Navigation-------------------------- */
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5;
-
-    transition: .3s;
-}
-
-header.scrolled{
-    background-color: transparent;
-    box-shadow: 0 3px 15px .1px rgb(0 0 0/.1);
-    backdrop-filter: blur(3px);
-}
-
-.navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo{
-    line-height: 120px;
-    height: 120px;
-
-    font-size: 3rem;
-    font-family: "Monoton",cursive;
-    color: #e33745;
-
-    cursor: pointer;
-    transition: .3s;
-}
-
-header.scrolled .logo{
-    line-height: 100px;
-    height: 100px;
-}
-
-.links{
-    display: flex;
-    align-items: center;
-    column-gap: 2rem;
-}
-
-.nav-links{
-    position: relative;
-
-    font-size: .95rem;
-    font-weight: 500;
-
-    text-transform: capitalize;
-    color: #e33745;
-    
-    transition: .4s ease-in-out;
-}
-
-
-.nav-links::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -5px;
-    z-index: -1;
-
-    height: 10px;
-    width: 0px;
-    border-radius: 10px;
-
-    background-color: #e33745;
-    opacity: 0;
-    transition: .3s ease-in-out;
-}
-
-.nav-links:hover::after{
-    opacity: .2;
-    width: 100%;
-}
-
 /* -----------------------------------------contact styling------------------------------- */
 
 .contact{
-    margin: 120px auto 0;
-    padding: 1rem 5rem;
+    margin-top: 120px !important;
+    padding: 1rem 5rem !important;
 
     display: flex;
     flex-direction: column;
@@ -215,7 +134,7 @@ header.scrolled .logo{
 /* ---------------------------------------mail box----------------------------- */
 
 .mail{
-    margin: 50px auto 0;
+    margin: 50px auto 0 !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,78 +187,61 @@ textarea.form-input{
     min-height: 170px;
 }
 
-/* -------------------------------------footer--------------------------- */
+/* -------------------------------media queries---------------------------- */
 
-footer{
-    margin-top: 120px;
-    background-color: #e33745;
+@media(max-width:768px){
+    
+    .heading{
+        font-size: 2.55rem;
+    }
+    .text{
+        font-size: .85rem;
+    }
+    .text>span{
+        font-size: 3.75rem;
+    }
+    
 }
+@media(max-width:425px){
+    .contact{
+        padding: 1rem 2.25rem !important;
+    }
+    .heading{
+        font-size: 2rem;
+    }
+    .text{
+        font-size: .75rem;
+    }
+    .text>span{
+        font-size: 3.5rem;
+    }
 
-.footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 3rem 2.25rem;
+    .form-input{
+        font-size: .75rem;
+    }
+    .button{
+        font-size: .8rem;
+    }
+    
 }
-
-.footer-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    max-width: 10rem;
+@media(max-width:375px){
+    .heading{
+        font-size: 1.725rem;
+    }
+    .text{
+        font-size: .675rem;
+    }
+    .text>span{
+        font-size: 3rem;
+    }
 }
-
-.fl-logo{
-    font-size: 2.65rem;
-    color: white;
-    font-family: "Monoton",cursive;
-}
-
-.socials{
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.sl{
-    border: 2px solid white;
-    border-radius: 50%;
-    width: 40px;
-    aspect-ratio: 1/1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.2);
-
-    transition: .3s;
-}
-
-.sl > *{
-    color: white;
-    font-size: 1.1rem;
-    transition: .3s;
-}
-
-.sl:hover{
-    background: rgba(255, 255, 255);
-}
-
-.sl:hover > *{
-    color: #e33745;
-}
-
-.ft-link{
-    color: white;
-    text-transform: capitalize;
-    font-weight: 300;
-    font-size: .95rem;
-    padding-left: .15rem;
-}
-
-.footer-links > li{
-    font-size: 1.1rem;
-    color: white;
-    font-weight: 600;
-    padding: 0 0 .55rem 0;
+@media(max-width:320px){
+    .heading{
+        font-size: 1.9rem;
+    }
+    .text{
+        text-align: center;
+        font-size: .7rem;
+    }
+    
 }
