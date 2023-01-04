@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caramel&family=Fugaz+One&family=Monoton&family=Poppins:wght@100;200;300;400;600;800&display=swap');
 
-/* font-family: 'Caramel', cursive;
-font-family: 'Fugaz One', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Poppins', sans-serif; */
-
 /* --------------------------------presets-------------------------- */
 
 *,
@@ -97,95 +92,14 @@ img{
 }
 
 .give-sec,.get-sec{
-    margin-top: 120px;
-    padding: 1rem 5rem;
+    margin-top: 120px !important;
+    padding: 1rem 5rem !important;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 1.25rem;
 }
 
-
-/* ---------------------Navigation-------------------------- */
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5;
-
-    transition: .3s;
-}
-
-header.scrolled{
-    background-color: transparent;
-    box-shadow: 0 3px 15px .1px rgb(0 0 0/.1);
-    backdrop-filter: blur(3px);
-}
-
-.navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo{
-    line-height: 120px;
-    height: 120px;
-
-    font-size: 3rem;
-    font-family: "Monoton",cursive;
-    color: #e33745;
-
-    cursor: pointer;
-    transition: .3s;
-}
-
-header.scrolled .logo{
-    line-height: 100px;
-    height: 100px;
-}
-
-.links{
-    display: flex;
-    align-items: center;
-    column-gap: 2rem;
-}
-
-.nav-links{
-    position: relative;
-
-    font-size: .95rem;
-    font-weight: 500;
-
-    text-transform: capitalize;
-    color: #e33745;
-    
-    transition: .4s ease-in-out;
-}
-
-
-.nav-links::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -5px;
-    z-index: -1;
-
-    height: 10px;
-    width: 0px;
-    border-radius: 10px;
-
-    background-color: #e33745;
-    opacity: 0;
-    transition: .3s ease-in-out;
-}
-
-.nav-links:hover::after{
-    opacity: .2;
-    width: 100%;
-}
 
 /* ---------------------------------------give section-------------------------------------- */
 
@@ -214,9 +128,8 @@ header.scrolled .logo{
     align-items: center;
 
     transition: .3s;
-
-    background-color: rgb(249, 245, 255);
-    border: 3px solid hsl(257,100%,98%);
+    background-color: hsl(264, 100%, 98%);
+    border: 3px solid hsl(258, 100%, 98%);
 }
 
 
@@ -349,82 +262,148 @@ input[type="text"]:focus + .search-button > .uil-search{
 
 .location-days{
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
 }
 
 
-/* -------------------------------------footer--------------------------- */
+/* -----------------------------------media queries-------------------------------- */
 
-footer{
-    margin-top: 120px;
-    background-color: #e33745;
+@media(max-width:768px){
+    .heading{
+        font-size: 2.55rem;
+        text-align: center;
+    }
+    .button{
+        padding: .6rem .75rem;
+        font-size: .8rem;
+        max-width: 10.5rem;
+    }
+    .filter-box{
+        align-self: center;
+    }
+
+    .list-item{
+        flex-direction: column;
+        padding-right: 0;
+        gap: 1.25rem;
+        padding-bottom: 2rem;
+    }
+    .item-desc{
+        gap: .75rem;
+    }
+    .item-img{
+        width: 100%;
+        height: 21rem;
+        border-radius: 0 0 .5rem .5rem;
+    }
+    .food-name{
+        font-size: 2.15rem;
+    }
+    .provider,.distance,.days{
+        color: #e33745;
+        font-size: .95rem;
+    }
+    
+    .location-days{
+        justify-content: space-between;
+        width: 80%;
+        gap: 0;
+    }
+
+
 }
+@media(max-width:425px){
+    .give-sec,.get-sec{
+        padding: 1rem 2.25rem !important;
+    }
 
-.footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 3rem 2.25rem;
+    .get-sec{
+        margin-top: 80px !important;
+    }
+
+    .heading{
+        font-size: 1.95rem;
+    }
+
+    .search-box{
+        max-width: 23rem;
+        scale: .8;
+    }
+    .item-desc{
+        gap: .5rem;
+    }
+    .item-img{
+        height: 13rem;
+    }
+
+    .listed-items{
+        padding: 0 0 !important;
+    }
+
+    .list-item{
+        overflow: hidden;
+    }
+    .food-name{
+        font-size: 1.75rem;
+    }
+    .text{
+        font-size: .75rem;
+    }
+    .provider,.distance,.days{
+        font-size: .85rem;
+    }
+    
+    .location-days{
+        justify-content: space-between;
+        width: 80%;
+        gap: 0;
+    }
+
+
+
 }
-
-.footer-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    max-width: 10rem;
+@media(max-width:375px){
+    .heading{
+        font-size: 1.55rem;
+    }
+    .button{
+        padding: .6rem .75rem;
+        font-size: .75rem;
+        max-width: 9.5rem;
+    }
+    .search-box{
+        max-width: 20rem;
+    }
+    .food-name{
+        font-size: 1.5rem;
+    }
+    .item-req{
+        scale: .9;
+    }
 }
-
-.fl-logo{
-    font-size: 2.65rem;
-    color: white;
-    font-family: "Monoton",cursive;
-}
-
-.socials{
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.sl{
-    border: 2px solid white;
-    border-radius: 50%;
-    width: 40px;
-    aspect-ratio: 1/1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.2);
-
-    transition: .3s;
-}
-
-.sl > *{
-    color: white;
-    font-size: 1.1rem;
-    transition: .3s;
-}
-
-.sl:hover{
-    background: rgba(255, 255, 255);
-}
-
-.sl:hover > *{
-    color: #e33745;
-}
-
-.ft-link{
-    color: white;
-    text-transform: capitalize;
-    font-weight: 300;
-    font-size: .95rem;
-    padding-left: .15rem;
-}
-
-.footer-links > li{
-    font-size: 1.1rem;
-    color: white;
-    font-weight: 600;
-    padding: 0 0 .55rem 0;
+@media(max-width:320px){
+    .give-sec{
+        gap: 2rem;
+    }
+    .heading{
+        font-size: 1.35rem;
+    }
+    .button{
+        padding: .6rem .75rem;
+        font-size: .75rem;
+        max-width: 8.5rem;
+    }
+    .item-desc{
+        padding: 0 1.5rem;
+    }
+    .item-img{
+        height: 11rem;
+    }
+    .search-box{
+        max-width: 17rem;
+    }
+    input[type="text"]{
+        width: 12rem;
+    }
 }

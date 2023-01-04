@@ -114,10 +114,6 @@ header.scrolled .logo{
     transition: .4s ease-in-out;
 }
 
-.nav-links:hover{
-    text-shadow: 0 0 2.5px rgba(255, 255, 255);
-}
-
 .nav-links::after{
     content: "";
     position: absolute;
