@@ -14,11 +14,9 @@ window.addEventListener("scroll",() => {
 
 hamburger.addEventListener("click",() => {
     document.body.classList.toggle("open")
-    document.body.classList.toggle("stop-scrolling")
 })
 
 overlay.addEventListener("click",() => {
     document.body.classList.toggle("open")
-    document.body.classList.toggle("stop-scrolling")
 })
 

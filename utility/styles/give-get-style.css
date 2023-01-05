@@ -128,8 +128,8 @@ img{
     align-items: center;
 
     transition: .3s;
-    background-color: hsl(264, 100%, 98%);
-    border: 3px solid hsl(258, 100%, 98%);
+    background-color: rgb(247, 246, 246);
+    border: 3px solid rgb(246, 246, 246);
 }
 
 
@@ -330,6 +330,9 @@ input[type="text"]:focus + .search-button > .uil-search{
         max-width: 23rem;
         scale: .8;
     }
+    input[type="text"]{
+        width: 17rem;
+    }
     .item-desc{
         gap: .5rem;
     }
@@ -375,6 +378,10 @@ input[type="text"]:focus + .search-button > .uil-search{
     .search-box{
         max-width: 20rem;
     }
+    input[type="text"]{
+        width: 17rem;
+    }
+
     .food-name{
         font-size: 1.5rem;
     }
