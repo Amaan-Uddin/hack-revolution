@@ -8,7 +8,8 @@
 
     <!-- links -->
     <link rel="stylesheet" href="utility\styles\other-nav-bar-styles.css">
-    <link rel="stylesheet" href="utility\styles\give-get-style.css">
+    <link rel="stylesheet" href="utility\styles\drop-down-style.css">
+    <link rel="stylesheet" href="utility\styles\give-style.css">
     <link rel="stylesheet" href="utility\styles\footer-style.css">
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -49,53 +50,65 @@
 
         <section>
             <div class="container give-sec">
-                <h1 class="heading">Have food you'd like to give away?</h1>
-                <a href="give.html">
-                    <button class="button">give</button>
+                <h1 class="heading">Hungry?<br>Grab some food</h1>
+                <a href="give-get.html">
+                    <button class="button">get</button>
                 </a>
             </div>
         </section>
 
         <section>
-            <div class="container get-sec">
-                <form action="https://google.com/search" method="get" class="filter-box">
-                    <div class="search-box">
-                        <input type="text" name="q" id="" placeholder="Search for food..." autocomplete="off">
-                        <!-- google accepts name="q" otherwise the button won't submit the text to google search page -->
-                        <button type="submit" class="search-button"><i class="uil uil-search"></i></button>
-                    </div>
-                </form>
+            <div class="container give-food">
+                <h1 class="heading">
+                    Wanna give away some food?
+                </h1>
 
-                <ul class="container listed-items">
-                    <li>
-                        <div class="list-item">
-                            <div class="item-img">
-                                <img src="utility\assets\images\biryani.jpg">
+                <form action="" class="upload-food">
+                    <div class="upload-img-container">
+                        <div class="wrapper">
+                            <div class="up-image">
+                                <img src="" alt="">
                             </div>
-                            <div class="item-desc">
-                                <h3 class="food-name">
-                                    biryani
-                                </h3>
-                                <p class="text">from, <span class="provider">Amaan</span></p>
-                                <div class="location-days">
-                                    <p class="text">
-                                        <span class="distance">2</span> km away..
-                                    </p>
-                                    <p class="text">
-                                        stays fresh for <span class="days">3</span> days 
-                                    </p>
-                                </div>
+                            <div class="up-content">
+                                <div class="up-icon"><i class="uil uil-upload"></i></div>
+                                <div class="up-text">No files chosen</div>
                             </div>
-                            <a href="">
-                                <button type="submit" class="button item-req"><i class="uil uil-check"></i></button>
-                            </a>
+                            <div id="cancle-btn"><i class="uil uil-times"></i></div>
+                            <div class="up-file-name">File name</div>
                         </div>
-                    </li>
-                </ul>
-
+                        <input type="file" name="" id="default-btn" hidden>
+                        <input type="button" value="choose photo" onclick="defaultBtnActive()" class="button">
+                    </div>
+                    <input type="text" name="Food name" class="form-input" placeholder="Food Name" required autocomplete="off">
+                    <div name="vg-novg" class="drop-down">
+                        <div class="select">
+                            <span class="selected">catigory</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li>veg</li>
+                            <li>non-veg</li>
+                        </ul>
+                    </div>
+                    <textarea placeholder="Description..." class="form-input" required></textarea>
+                    <input type="text" name="user location" class="form-input" placeholder="location" required autocomplete="off">
+                    <div name="bestBy" class="drop-down">
+                        <div class="select">
+                            <span class="selected">Best By</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li>1 day</li>
+                            <li>2 days</li>
+                            <li>3 days</li>
+                            <li>4 days</li>
+                            <li>5 days</li>
+                        </ul>
+                    </div>
+                    <button type="submit" class="button">upload</button>
+                </form>
             </div>
         </section>
-
 
         <footer>
             <div class="container footer">
@@ -158,5 +171,6 @@
 
     <!-- script -->
     <script src="utility\scripts\app.js"></script>
+    <script src="utility\scripts\upload-img.js"></script>
 </body>
 </html>
