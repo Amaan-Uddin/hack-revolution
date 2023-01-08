@@ -46,5 +46,3 @@ dropdown.forEach(dropdownElement => {
         })
     })
 })
-
-
