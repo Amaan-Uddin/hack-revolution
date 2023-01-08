@@ -18,7 +18,7 @@ body{
 
 ::selection{
     color: white;
-    background-color: #e33745;
+    background-color: #00a69c;
 }
 
 :focus{
@@ -59,7 +59,7 @@ img{
     text-transform: capitalize;
     color: rgb(255, 255, 255);
     
-    background-color: #e33745;
+    background-color: #00a69c;
 
     display: flex;
     align-items: center;
@@ -86,7 +86,7 @@ a:has(.button){
 .heading{
     font-size: 2.65rem;
     font-family: "Abril Fatface",cursive;
-    color: #e33745;
+    color: #00a69c;
     letter-spacing: 2px;
     text-align: center;
 }
@@ -119,7 +119,7 @@ a:has(.button){
 .wrapper{
     height: 350px;
     width: 520px;
-    border: 3px dashed #e33745;
+    border: 3px dashed #00a69c;
     border-radius: 17px;
     background-color: rgb(247, 246, 246);
     display: flex;
@@ -155,7 +155,7 @@ a:has(.button){
 }
 
 .up-icon{
-    color: #e33745;
+    color: #00a69c;
     font-size: 2.5rem;
 }
 .up-text{
@@ -168,7 +168,7 @@ a:has(.button){
     right: 15px;
     top: 15px;
     font-size: 1.25rem;
-    background-color: #e33745;
+    background-color: #00a69c;
     border-radius: 50%;
     width: 3rem;
     font-size: 2rem;
@@ -194,7 +194,7 @@ a:has(.button){
 .up-file-name{
     position: absolute;
     bottom: 0;
-    background-color: #e33745;
+    background-color: #00a69c;
     width: 105%;
     font-size: 1.1rem;
     padding: 8px 0;
@@ -248,7 +248,7 @@ a:has(.button){
 .form-input:focus,
 .form-input:valid{
     filter: brightness(100%);
-    border-color: #e33745;
+    border-color: #00a69c;
     color: black;
 }
 /* the valid pseudo class will allow us to keep the CSS style on the input field till it has a valid value */
@@ -298,7 +298,7 @@ textarea.form-input{
         font-size: 2.15rem;
     }
     .provider,.distance,.days{
-        color: #e33745;
+        color: #00a69c;
         font-size: .95rem;
     }
     

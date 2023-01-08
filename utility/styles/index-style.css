@@ -20,7 +20,7 @@ body{
 
 ::selection{
     color: white;
-    background-color: #e33745;
+    background-color: #00a69c;
 }
 
 :focus{
@@ -87,7 +87,7 @@ img{
     background-color: white;
 }
 .button:hover > *{
-    color: #e33745;
+    color: #00a69c;
 }
 
 .logo,.nav-links{
@@ -99,20 +99,18 @@ img{
 
 /* -------------------------------Index landing page--------------------- */
 
-body{
+
+section:has(.landing-page){
     background-image: linear-gradient(90deg,rgba(0 0 0/.5),rgba(0 0 0/.5)), 
         url("../assets/images/content-strawberries.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-}
-
-section:has(.landing-page){
-    margin: 120px 0;
+    /* top: -120px; */
+    /* margin: 120px 0; */
 }
 .landing-page{
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +139,7 @@ section:has(.landing-page){
 
 @media (max-width:768px){
     .button > *{
-        color: #e33745;
+        color: #00a69c;
     }
 
     .title{
@@ -158,7 +156,7 @@ section:has(.landing-page){
         font-size: .8rem;
         max-width: 9rem;
         background-color: white;
-        color: #e33745;
+        color: #00a69c;
     }
 
 }

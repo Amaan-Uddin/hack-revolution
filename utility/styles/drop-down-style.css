@@ -18,7 +18,7 @@ body{
 
 ::selection{
     color: white;
-    background-color: #e33745;
+    background-color: #00a69c;
 }
 
 :focus{
@@ -79,7 +79,7 @@ img{
 }
 
 li.active{
-    color: #e33745;
+    color: #00a69c;
 }
 
 
